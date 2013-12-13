@@ -4,5 +4,6 @@
 <display>
 	<category name="category.sample">
 		<portlet id="ItemPortlet" />
+		<portlet id="ItemCountPortlet" />
 	</category>
 </display>

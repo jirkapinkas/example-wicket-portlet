@@ -11,7 +11,7 @@
 	</context-param>
 
 	<filter>
-		<filter-name>HelloWorldApplication</filter-name>
+		<filter-name>ItemPortlet</filter-name>
 		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
 		<init-param>
 			<param-name>detectPortletContext</param-name>
@@ -24,8 +24,29 @@
 	</filter>
 
 	<filter-mapping>
-		<filter-name>HelloWorldApplication</filter-name>
+		<filter-name>ItemPortlet</filter-name>
 		<url-pattern>/ItemPortlet/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>ItemCountPortlet</filter-name>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<init-param>
+			<param-name>detectPortletContext</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>cz.jiripinkas.portlet.itemcount.ItemCountPortlet</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>ItemCountPortlet</filter-name>
+		<url-pattern>/ItemCountPortlet/*</url-pattern>
 		<dispatcher>FORWARD</dispatcher>
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>INCLUDE</dispatcher>

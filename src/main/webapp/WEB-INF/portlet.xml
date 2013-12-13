@@ -34,4 +34,35 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 	</portlet>
+	
+	<portlet>
+		<portlet-name>ItemCountPortlet</portlet-name>
+		<display-name>ItemCountPortlet</display-name>
+		<portlet-class>org.apache.wicket.protocol.http.portlet.WicketPortlet</portlet-class>
+		<init-param>
+			<name>wicketFilterPath</name>
+			<value>/ItemCountPortlet</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Item count portlet</title>
+			<short-title>Item count portlet</short-title>
+			<keywords>item, items</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
 </portlet-app>
